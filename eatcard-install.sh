@@ -37,3 +37,5 @@ ExecStart=
 ExecStart=-/sbin/agetty --noissue --autologin user %%I $$TERM
 Type=idle' > /etc/systemd/system/getty@tty1.service.d/override.conf
 printf "[X] - Automatic login installed"
+
+printf "Reboot for settings to take affect!"
