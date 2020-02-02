@@ -4,6 +4,8 @@
 apt-get update && apt-get -y upgrade
 # Install required software
 apt-get install xserver-xorg x11-xserver-utils xinit openbox -y
+# Install ifconfig
+apt-get install net-tools -y
 # Install Chromium browser
 apt-get install chromium-browser -y
 printf "
