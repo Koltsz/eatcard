@@ -4,8 +4,10 @@
 apt-get update && apt-get -y upgrade
 # Install required software
 apt-get install xserver-xorg x11-xserver-utils xinit openbox -y
-# Install ifconfig
-apt-get install net-tools -y
+# Install xinput
+apt-get install xinput -y
+# Install network-manager
+apt-get install network-manager -y
 # Install Chromium browser
 apt-get install chromium-browser -y
 printf "
@@ -24,14 +26,14 @@ printf "
 "
 
 # Openbox autostart settings
-mv /etc/xdg/openbox/autostart /etc/xdg/openbox/autostart-backup
 printf '
 xset s off
 xset s noblank
 xset -dpms
 
-xrandr --orientation right
-chromium-browser  --disbale-infobars --disable-translate --disable-breakpad --disable-crash-reporter --disable-sync --kiosk "https://eatcard.nl"
+xrandr -o right
+xinput set-prop '$screenID' 'Coordinate Transformation Matrix' 
+chromium-browser --disable-translate --disable-crash-reporter --kiosk "https://eatcard.nl"
 ' > /etc/xdg/openbox/autostart
 printf "
 
