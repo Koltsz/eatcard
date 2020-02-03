@@ -31,8 +31,8 @@ xset s off
 xset s noblank
 xset -dpms
 
-xrandr -o right
-xinput set-prop '$screenID' 'Coordinate Transformation Matrix' 
+xrandr -o left
+xinput set-prop '$screenID' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
 chromium-browser --disable-translate --disable-crash-reporter --kiosk "https://eatcard.nl"
 ' > /etc/xdg/openbox/autostart
 printf "
