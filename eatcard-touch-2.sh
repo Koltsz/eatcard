@@ -1,14 +1,5 @@
 #!/bin/bash
 
-while true; do
-    read -p "Did you run the 1st script and get the touchscreen ID? (y/n): " yn
-    case $yn in 
-        y|Y* ) yesPass;;
-        n|N* ) noPass;;
-        * ) echo "Please answer yes or no.";;
-    esac
-done
-
 noPass(){
 printf "\n\nPlease make sure you run the first script, this will allow you to run a command
 The command you need to run is xinit
@@ -70,3 +61,13 @@ printf "
 
 printf "Reboot for settings to take affect!"
 }
+
+
+while true; do
+    read -p "Did you run the 1st script and get the touchscreen ID? (y/n): " yn
+    case $yn in 
+        y|Y* ) yesPass;;
+        n|N* ) noPass;;
+        * ) echo "Please answer yes or no.";;
+    esac
+done
