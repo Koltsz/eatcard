@@ -60,6 +60,7 @@ printf "
 "
 
 printf "Reboot for settings to take affect!"
+exit
 }
 
 
