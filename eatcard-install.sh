@@ -9,7 +9,7 @@ apt-get install xinput -y
 # Install network-manager
 apt-get install network-manager -y
 # Install Chromium browser
-apt-get install chromium-browser -y
+apt-get install chromium-browser -y 
 printf "
 
 [X] - OS update and software installed
