@@ -22,7 +22,7 @@ printf "
 "
 
 # Openbox autostart settings
-printf '
+printf "
 xset s off
 xset s noblank
 xset -dpms
@@ -31,7 +31,7 @@ xrandr -o left
 xrandxrand --fb 1080x1920
 xinput set-prop '$touchID' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
 chromium-browser --disable-translate --disable-crash-reporter --kiosk "https://eatcard.nl"
-' > /etc/xdg/openbox/autostart
+" > /etc/xdg/openbox/autostart
 printf "
 
 [X] - Screen and browser setup COMPLETED
