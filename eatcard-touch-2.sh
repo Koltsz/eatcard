@@ -13,7 +13,7 @@ read touchID
 echo "ID selected = $touchID"
 
 # Create .bash_profile to autostart the environmentreboo
-printf 'startx' > /home/user/.bash_profile
+printf 'startx -- -nocursor' > /home/user/.bash_profile
 chown user:user /home/user/.bash_profile
 printf "
 
