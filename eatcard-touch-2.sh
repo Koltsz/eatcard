@@ -32,6 +32,15 @@ xrandxrand --fb 1080x1920
 xinput set-prop '$touchID' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
 chromium-browser --disable-translate --disable-crash-reporter --kiosk 'https://eatcard.nl'
 " > /etc/xdg/openbox/autostart
+
+printf '
+Section "Device"
+  Identifier "Intel Graphics"
+  Driver "intel"
+EndSection
+' > /usr/share/X11/xorg.conf.d/20-intel.conf
+
+
 printf "
 
 [X] - Screen and browser setup COMPLETED
@@ -58,6 +67,9 @@ printf "
 [X] - Automatic login installed
 
 "
+
+# systemctl disable systemd-networkd-wait-online.service
+# systemctl mask systemd-networkd-wait-online.service
 
 printf "Reboot for settings to take affect!"
 exit

@@ -6,6 +6,8 @@ apt-get update && apt-get -y upgrade
 apt-get install xserver-xorg x11-xserver-utils xinit openbox -y
 # Install xinput, xterm and network-manager
 apt-get install xinput xterm network-manager -y
+# INstall intel driver
+apt-get install xserver-xorg-video-intel -y
 # Install Chromium browser
 apt-get install chromium-browser -y 
 printf "
