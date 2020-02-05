@@ -11,7 +11,7 @@ apt-get install xserver-xorg-video-intel -y
 # Install Chromium browser
 apt-get install chromium-browser -y
 # Install gnome session
-sudo apt install gnome-session
+apt-get install gnome-session -y
 
 
 systemctl disable systemd-networkd-wait-online.service
