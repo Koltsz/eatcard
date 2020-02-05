@@ -16,7 +16,8 @@ printf "
 
 # Openbox autostart settings
 printf '
-xterm 
+xterm
+chromium-browser 
 ' > /etc/xdg/openbox/autostart
 
 runuser -l user 'startx'
