@@ -13,7 +13,7 @@ Name=EatCard App
 # From Ubuntu's language-pack-kde-XX-base packages, version 9.04-20090413.
 Exec=/usr/bin/chromium-browser --disable-translate --disable-crash-reporter --kiosk https://app.eatcard.nl/account/login
 Terminal=false
-Icon=whatsapp
+Icon=chromium-browser
 Type=Application
 Categories=Network;WebBrowser;
 MimeType=text/html;text/xml;application/xhtml_xml;image/webp;x-scheme-handler/http;x-scheme-handler/https;x-scheme-handler/ftp;
