@@ -11,7 +11,7 @@ Version=1.0
 Name=EatCard App
 GenericName=Web Browser
 Exec=/usr/bin/chromium --disable-translate --disable-crash-reporter --kiosk 'https://app.eatcard.nl/account/login'
-" > /usr/share/applications
+" > /usr/share/applications/eatcard-app.desktop
 
 printf "
 
