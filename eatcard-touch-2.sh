@@ -8,31 +8,31 @@ exit
 }
 
 yesPass(){
-echo "What was the ID of the touchscreen?"
-read touchID
-echo "ID selected = $touchID"
+# echo "What was the ID of the touchscreen?"
+# read touchID
+# echo "ID selected = $touchID"
 
 # Create .bash_profile to autostart the environmentreboo
-printf 'startx -- -nocursor' > /home/user/.bash_profile
-chown user:user /home/user/.bash_profile
-printf "
+# printf 'startx -- -nocursor' > /home/user/.bash_profile
+# chown user:user /home/user/.bash_profile
+# printf "
 
-[X] - Automatic app load installed
+# [X] - Automatic app load installed
 
-"
+#"
 
 # Openbox autostart settings
-printf "
-xset s off
-xset s noblank
-xset -dpms
+# printf "
+# xset s off
+# xset s noblank
+# xset -dpms
 
-xrandr -o left
-xrandxrand --fb 1080x1920
-xinput set-prop '$touchID' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
-chromium-browser --disable-translate --disable-crash-reporter --kiosk 'https://eatcard.nl'
-matchbox-keyboard
-" > /etc/xdg/openbox/autostart
+# xrandr -o left
+# xrandxrand --fb 1080x1920
+# xinput set-prop '$touchID' 'Coordinate Transformation Matrix' 0 -1 1 1 0 0 0 0 1
+# chromium-browser --disable-translate --disable-crash-reporter --kiosk 'https://eatcard.nl'
+# matchbox-keyboard
+# " > /etc/xdg/openbox/autostart
 
 printf '
 Section "Device"
@@ -48,13 +48,13 @@ printf "
 
 "
 
-# Openbox Keybindings
-wget https://raw.githubusercontent.com/Koltsz/eatcard/master/rc.xml -P /home/user/.config/openbox/
-printf "
+# # Openbox Keybindings
+# wget https://raw.githubusercontent.com/Koltsz/eatcard/master/rc.xml -P /home/user/.config/openbox/
+# printf "
 
-[X] - Disabled shorcut keys COMPLETED
+# [X] - Disabled shorcut keys COMPLETED
 
-"
+# "
 
 # Auto Login
 mkdir /etc/systemd/system/getty@tty1.service.d
@@ -69,8 +69,8 @@ printf "
 
 "
 
-# systemctl disable systemd-networkd-wait-online.service
-# systemctl mask systemd-networkd-wait-online.service
+systemctl disable systemd-networkd-wait-online.service
+systemctl mask systemd-networkd-wait-online.service
 
 printf "Reboot for settings to take affect!"
 exit
