@@ -27,7 +27,6 @@ printf '
 Section "Device"
    Identifier "Intel Graphics"
    Driver "intel"
-   Option "AccelMethod" "uxa"
    Option "TearFree" "true"
    Option  "TripleBuffer" "true"
 EndSection
