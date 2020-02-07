@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# Graphics
-add-apt-repository ppa:oibaf/graphics-drivers
 # Update and upgrade OS
 apt-get update && apt-get -y upgrade
 # Install required software
