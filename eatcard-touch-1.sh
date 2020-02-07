@@ -28,9 +28,8 @@ Section "Device"
    Identifier "Intel Graphics"
    Driver "intel"
    Option "TearFree" "true"
-   Option  "TripleBuffer" "true"
 EndSection
-' > /etc/X11/xorg.conf.d/20-intel.conf
+' > /usr/share/X11/xorg.conf.d/20-intel_flicker_fix.conf
 
 printf "
 
